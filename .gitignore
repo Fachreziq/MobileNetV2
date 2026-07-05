@@ -1,42 +1,54 @@
-# Python
+# ============================
+# Python Cache
+# ============================
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 
+# ============================
 # Virtual Environment
+# ============================
 venv/
 .venv/
 env/
 
-# VS Code
+# ============================
+# IDE
+# ============================
 .vscode/
-
-# PyCharm
 .idea/
 
+# ============================
 # Jupyter Notebook
+# ============================
 .ipynb_checkpoints/
 
+# ============================
 # Environment Variables
+# ============================
 .env
 
-# Uploaded Images
-static/uploads/*
-
-# Model
-model/*.keras
-model/*.h5
-model/*.pkl
-
+# ============================
 # Dataset
+# (Tidak perlu di-upload ke GitHub)
+# ============================
 dataset/
 
-# macOS
-.DS_Store
+# ============================
+# Upload User
+# ============================
+static/uploads/*
+!static/uploads/.gitkeep
 
-# Windows
-Thumbs.db
-
+# ============================
 # Logs
+# ============================
 *.log
+
+# ============================
+# OS Files
+# ============================
+.DS_Store
+Thumbs.db
+desktop.ini
