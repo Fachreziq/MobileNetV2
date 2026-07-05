@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+
+<div class="col-md-5">
+
+<div class="card p-4">
+
+<h3 class="text-center mb-4">
+
+Upload Image
+
+</h3>
+
+<form method="POST"
+
+enctype="multipart/form-data">
+
+<input
+
+type="file"
+
+name="image"
+
+class="form-control"
+
+required>
+
+<br>
+
+<button
+
+class="btn btn-primary w-100">
+
+Predict
+
+</button>
+
+</form>
+
+{% if image_path %}
+
+<hr>
+
+<img
+
+src="{{ image_path }}"
+
+class="img-fluid rounded">
+
+{% endif %}
+
+</div>
+
+</div>
+
+<div class="col-md-7">
+
+{% if error %}
+
+<div class="alert alert-danger">
+
+{{ error }}
+
+</div>
+
+{% endif %}
+
+{% if result %}
+
+<div class="card p-4">
+
+<h2>
+
+Prediction Result
+
+</h2>
+
+<hr>
+
+<h3 class="text-success">
+
+{{ result.prediction }}
+
+</h3>
+
+<h4>
+
+Confidence
+
+{{ result.confidence }} %
+
+</h4>
+
+<p>
+
+{{ result.description }}
+
+</p>
+
+<hr>
+
+<h4>
+
+Probability
+
+</h4>
+
+<table class="table table-striped">
+
+<thead>
+
+<tr>
+
+<th>Class</th>
+
+<th>Probability</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for item in result.probabilities %}
+
+<tr>
+
+<td>
+
+{{ item.class }}
+
+</td>
+
+<td>
+
+{{ item.probability }} %
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+{% endif %}
+
+<div class="card p-4 mt-4">
+
+<h3>
+
+Model Information
+
+</h3>
+
+<hr>
+
+<ul>
+
+<li>
+
+Base Model :
+
+MobileNetV2
+
+</li>
+
+<li>
+
+Input Size :
+
+224 × 224
+
+</li>
+
+<li>
+
+Optimizer :
+
+Adam
+
+</li>
+
+<li>
+
+Epoch :
+
+20
+
+</li>
+
+<li>
+
+Framework :
+
+TensorFlow + Flask
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

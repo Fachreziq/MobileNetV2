@@ -1,0 +1,266 @@
+/* ==========================
+   Google Font
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* ==========================
+   Navbar
+========================== */
+
+.navbar{
+    background:#0d6efd !important;
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+.navbar-brand{
+    color:#fff !important;
+    font-size:24px;
+    font-weight:600;
+}
+
+/* ==========================
+   Card
+========================== */
+
+.card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+/* ==========================
+   Button
+========================== */
+
+.btn-primary{
+    background:#0d6efd;
+    border:none;
+    border-radius:10px;
+    padding:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    background:#0b5ed7;
+}
+
+/* ==========================
+   Upload
+========================== */
+
+input[type=file]{
+
+    border:2px dashed #0d6efd;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+input[type=file]:hover{
+
+    background:#eef5ff;
+
+}
+
+/* ==========================
+   Preview Image
+========================== */
+
+img{
+
+    border-radius:15px;
+
+    margin-top:15px;
+
+    width:100%;
+
+    object-fit:cover;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+
+}
+
+/* ==========================
+   Heading
+========================== */
+
+h2,h3,h4{
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   Prediction
+========================== */
+
+.text-success{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   Table
+========================== */
+
+.table{
+
+    margin-top:15px;
+
+}
+
+.table th{
+
+    background:#0d6efd;
+
+    color:white;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+/* ==========================
+   Progress Bar
+========================== */
+
+.progress{
+
+    height:24px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   Alert
+========================== */
+
+.alert{
+
+    border-radius:12px;
+
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+
+    margin-top:60px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+/* ==========================
+   Animation
+========================== */
+
+.fade-up{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+
+        font-size:18px;
+
+    }
+
+    h2{
+
+        font-size:24px;
+
+    }
+
+    h3{
+
+        font-size:20px;
+
+    }
+
+    .text-success{
+
+        font-size:28px;
+
+    }
+
+    .card{
+
+        margin-bottom:20px;
+
+    }
+
+}
